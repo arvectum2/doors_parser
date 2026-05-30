@@ -1,0 +1,183 @@
+﻿producer;target_line;material_from_table;rows_count;unique_models_count;image_missing_count;status;comment
+Скамбио Порте;Смальта Деко;эмаль;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;Смальта Белла;эмаль;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;Смальта Галант;эмаль;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;Смальта Лайн;эмаль;6;6;0;found;ok
+Скамбио Порте;Смальта Нова;эмаль;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;Смальта Риф;эмаль;2;2;0;found;ok
+Скамбио Порте;Смальта Шарм;эмаль;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;ПС;ПВХ;327;327;7;found;ok
+Скамбио Порте;ПСЛ;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;ПСК;ПВХ;4;4;0;found;ok
+Скамбио Порте;ПСЦ Модерн;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;ПСЦ Классика;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;ПСУ;ПВХ;5;5;0;found;ok
+Скамбио Порте;ПХ Алл кромка Черный;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;ПХ Алл кромка Хром;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;ПСТ;ПВХ;34;34;0;found;ok
+Скамбио Порте;ПСЕ;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;ПДЕ;ПВХ;9;9;0;found;ok
+Скамбио Порте;П АБС кромка Черный;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Скамбио Порте;П;ПВХ;268;268;3;found;ok
+Скамбио Порте;Инвизибл;Под покраску;1;1;1;needs_manual_review;collection not found on site
+Хаусдорс;Фактурные линии;ПВХ;14;14;0;found;ok
+Хаусдорс;Классико;ПВХ;95;95;0;found;ok
+Хаусдорс;Порта;ПВХ;1;1;0;needs_manual_review;collection not found on site
+Хаусдорс;Новая классика;ПВХ;14;14;0;found;ok
+Хаусдорс;Вертикаль;Эмаль;12;12;0;found;ok
+Хаусдорс;Минимализм;ПВХ;14;14;0;found;ok
+Хаусдорс;Современная классика;ПВХ;14;14;0;found;ok
+Хаусдорс;Атмосфера;Эмаль;11;11;0;found;ok
+Хаусдорс;Элегант;Эмаль;10;10;0;found;ok
+Хаусдорс;Гармония;Эмаль;11;11;0;found;ok
+Хаусдорс;Свобода;Эмаль;16;16;0;found;ok
+Хаусдорс;Геометрия;Эмаль;11;11;0;found;ok
+Хаусдорс;Сияние;Эмаль;12;12;0;found;ok
+Хаусдорс;Сибирь;ШПОН;11;11;0;found;ok
+Хаусдорс;Под покраску;под покраску;134;134;0;found;ok
+Хаусдорс;С зеркалом;под покраску;196;196;0;found;ok
+Хаусдорс;Входные аллюминиевые;;1;1;0;found;ok
+Хаусдорс;Входные металлические;;1;1;0;needs_manual_review;collection not found on site
+Олимп;Гамма;ШПОН;10;10;0;found;ok
+Олимп;Магнум;ШПОН;8;8;0;found;ok
+Олимп;Директ +;ШПОН;30;30;0;found;ok
+Олимп;Кинк;ШПОН;31;31;0;found;ok
+Олимп;Нюанс;ШПОН;9;9;0;found;ok
+Олимп;Галео;ШПОН;33;33;0;found;ok
+Олимп;Рич;ШПОН;9;9;0;found;ok
+Олимп;Директ;ШПОН;1;1;0;needs_manual_review;collection not found on site
+Олимп;Денди;ШПОН;9;9;0;found;ok
+Олимп;Сингл;ШПОН;13;13;0;found;ok
+Олимп;Токио;ШПОН;31;31;0;found;ok
+Олимп;Классика;ШПОН;31;31;0;found;ok
+Олимп;Лофт;ШПОН;31;31;0;found;ok
+Олимп;Модерн;ШПОН;30;30;0;found;ok
+Олимп;Стиль;ШПОН;18;18;0;found;ok
+Олимп;Венир;ШПОН;31;31;0;found;ok
+Олимп;Книжки;ШПОН;31;31;0;found;ok
+Аэлита;Альфа;ПВХ;12;12;0;found;ok
+Аэлита;Бока;ПВХ;8;8;0;found;ok
+Аэлита;Британия;ПВХ;20;20;0;found;ok
+Аэлита;Классика;ПВХ;10;10;0;found;ok
+Аэлита;Эмма;ПВХ;36;36;0;found;ok
+Аэлита;Элемент;ПВХ;15;15;0;found;ok
+Аэлита;Фелино;ПВХ;12;12;0;found;ok
+Аэлита;Мальта;ПВХ;10;10;0;found;ok
+Аэлита;Мэрил;ПВХ;13;13;0;found;ok
+Аэлита;Натур;ПВХ;8;8;0;found;ok
+Аэлита;Перфект;ПВХ;14;14;0;found;ok
+Аэлита;Профайн;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Аэлита;Скай;ПВХ;6;6;0;found;ok
+Аэлита;Студио;ПВХ;8;8;0;found;ok
+Аэлита;Твин;ПВХ;17;17;0;found;ok
+Аэлита;Антик Лайн;ПВХ;15;15;0;found;ok
+Аэлита;Антикью;ПВХ;15;15;0;found;ok
+Аэлита;Дэлия;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Аэлита;Дэманд;ПВХ;14;14;0;found;ok
+Аэлита;Флэкс;ПВХ;12;12;0;found;ok
+Аэлита;Фреддио;ПВХ;9;9;0;found;ok
+Аэлита;Грейс;ПВХ;11;11;0;found;ok
+Аэлита;Лэвэл;ПВХ;48;48;0;found;ok
+Аэлита;Тренд;ПВХ;14;14;0;found;ok
+Аэлита;Плайер;ПВХ;6;6;0;found;ok
+Лорд;Фелиция;ПВХ,Эмаль;18;18;0;found;ok
+Лорд;Кантри Вилла;ПВХ,Эмаль;24;24;0;found;ok
+Лорд;Молле;ПВХ,Эмаль;6;6;0;found;ok
+Лорд;Мия Мария;ПВХ,Эмаль;12;12;0;found;ok
+Лорд;Брио;ПВХ,Эмаль;31;31;0;found;ok
+Лорд;Примо;ПВХ,Эмаль;13;13;0;found;ok
+Лорд;Кантри;ПВХ,Эмаль;57;57;0;found;ok
+Лорд;Ренессанс;ПВХ,Эмаль;27;27;0;found;ok
+Лорд;Милетти;ПВХ,Эмаль;19;19;0;found;ok
+Лорд;Дольче;ПВХ,Эмаль;43;43;0;found;ok
+Лорд;Бриз;ПВХ,Эмаль;31;31;0;found;ok
+Лорд;Аванти;ПВХ,Эмаль;10;10;0;found;ok
+Лорд;Ар-деко;ПВХ,Эмаль;12;12;0;found;ok
+Лорд;Элегант;ПВХ,Эмаль;11;11;0;found;ok
+Лорд;Астория;ПВХ,Эмаль;17;17;0;found;ok
+Лорд;Асти;ПВХ,Эмаль;29;29;0;found;ok
+Лорд;Италия;ПВХ,Эмаль;46;46;0;found;ok
+Лорд;Корона;ПВХ,Эмаль;13;13;0;found;ok
+Лорд;Белла;ПВХ,Эмаль;23;23;0;found;ok
+Лорд;Соло;ПВХ,Эмаль;14;14;0;found;ok
+Лорд;Техно;ПВХ,Эмаль;12;12;0;found;ok
+Лорд;Мелфорд;ПВХ,Эмаль;14;14;0;found;ok
+Лорд;Стиль;ПВХ,Эмаль;15;15;0;found;ok
+Лорд;Модерн;ПВХ,Эмаль;28;28;0;found;ok
+Лорд;Альфа;ПВХ,Эмаль;10;10;0;found;ok
+Лорд;Атриум;ПВХ,Эмаль;19;19;0;found;ok
+Лорд;Пунта;ПВХ,Эмаль;7;7;0;found;ok
+Лорд;Луна;ПВХ,Эмаль;4;4;0;found;ok
+Лорд;Зенит;ПВХ,Эмаль;4;4;0;found;ok
+Лорд;Арея;ПВХ,Эмаль;6;6;0;found;ok
+Лорд;Риливево;ПВХ,Эмаль;11;11;0;found;ok
+Лорд;Баухаус;ПВХ,Эмаль;11;11;0;found;ok
+Лорд;Альтро СФ;ПВХ,Эмаль;60;60;0;found;ok
+Лорд;Альтро МФ;ПВХ,Эмаль;60;60;0;found;ok
+Лорд;Альтро Ф;ПВХ,Эмаль;60;60;0;found;ok
+Лорд;Токко;ПВХ,Эмаль;8;8;0;found;ok
+Лорд;Фигура;ПВХ,Эмаль;27;27;0;found;ok
+Лорд;Италия Арте;ПВХ,Эмаль;34;34;0;found;ok
+Лорд;Люми Лайн;ПВХ,Эмаль;32;32;0;found;ok
+Лорд;Футуристик;ПВХ,Эмаль;40;40;0;found;ok
+Лорд;Эклисси;ПВХ,Эмаль;14;14;0;found;ok
+Комфорт;Эмаль;Эмаль;47;47;0;found;ok
+Комфорт;New line;Эмаль;1;1;0;needs_manual_review;collection not found on site
+Комфорт;Slope;Эмаль;1;1;0;needs_manual_review;collection not found on site
+Комфорт;True;Эмаль;1;1;0;needs_manual_review;collection not found on site
+Комфорт;Gift;Эмаль;1;1;0;needs_manual_review;collection not found on site
+Комфорт;Art;Эмаль;1;1;0;needs_manual_review;collection not found on site
+Комфорт;Premier;Эмаль;1;1;0;needs_manual_review;collection not found on site
+Комфорт;Malta;Эмаль;1;1;0;needs_manual_review;collection not found on site
+Комфорт;Neo;Эмаль;1;1;0;needs_manual_review;collection not found on site
+Комфорт;Molding;Эмаль;1;1;0;needs_manual_review;collection not found on site
+Комфорт;Turin;Эмаль;1;1;0;needs_manual_review;collection not found on site
+Комфорт;Экошпон;ПВХ;1;1;0;needs_manual_review;collection not found on site
+Двери регионов;Массив;массив;1;1;0;needs_manual_review;collection not found on site
+Двери регионов;Натуральный шпон;шпон;19;19;0;found;ok
+Двери регионов;Софт тач;ПВХ;1;1;0;needs_manual_review;collection not found on site
+Двери регионов;Экошпон;ПВХ;1;1;0;needs_manual_review;collection not found on site
+Двери регионов;Эмаль и лак;Эмаль;18;18;1;found;ok
+Термодур;Сибирь термо медь;;104;104;0;found;ok
+Термодур;Сибирь термо серебро;;33;33;0;found;ok
+Термодур;Сибирь термо премиум;;46;46;0;found;ok
+Термодур;Зеркало/стекло;;1;1;0;found;ok
+Термодур;Термо лацио;;1;1;0;found;ok
+Термодур;Термо вертикаль грей;;2;2;0;found;ok
+Термодур;Термо вертикаль венге;;3;3;0;found;ok
+Термодур;Термо виргиния венге;;1;1;0;found;ok
+Термодур;Термо модена венге;;1;1;0;found;ok
+Термодур;Термо орегон венге;;2;2;0;found;ok
+Термодур;Термо премиум грей;;11;11;0;found;ok
+Энтро;Aria;ПВХ, Эмаль;11;11;0;found;ok
+Энтро;Galant;ПВХ, Эмаль;16;16;0;found;ok
+Энтро;Magic;ПВХ, Эмаль;11;11;0;found;ok
+Энтро;Zero;ПВХ, Эмаль;8;8;0;found;ok
+Энтро;Toscana;ПВХ, Эмаль;12;12;0;found;ok
+Энтро;Freedom;ПВХ, Эмаль;10;10;0;found;ok
+Энтро;Rift;ПВХ, Эмаль;6;6;0;found;ok
+Энтро;Window;ПВХ, Эмаль;10;10;0;found;ok
+Энтро;Hidden;ПВХ, Эмаль;7;7;0;found;ok
+Энтро;Unico;ПВХ, Эмаль;12;12;0;found;ok
+Энтро;Gradient;ПВХ, Эмаль;6;6;0;found;ok
+Энтро;Alliance;ПВХ, Эмаль;4;4;0;found;ok
+Энтро;Prime;ПВХ, Эмаль;14;14;0;found;ok
+Энтро;Fashion;ПВХ, Эмаль;14;14;0;found;ok
+Энтро;Neo;ПВХ, Эмаль;7;7;0;found;ok
+Энтро;Veneer;ПВХ, Эмаль;8;8;0;found;ok
+Энтро;Line;ПВХ, Эмаль;12;12;0;found;ok
+Энтро;Band;ПВХ, Эмаль;12;12;0;found;ok
+Энтро;Simple;ПВХ, Эмаль;20;20;0;found;ok
+Энтро;Horizon;ПВХ, Эмаль;15;15;0;found;ok
+Энтро;Forward;ПВХ, Эмаль;10;10;0;found;ok
+Энтро;Motion;ПВХ, Эмаль;10;10;0;found;ok
+Энтро;Slab decor;ПВХ, Эмаль;2;2;0;found;ok
+Энтро;Mone;ПВХ, Эмаль;7;7;0;found;ok
+Энтро;Minimal;ПВХ, Эмаль;6;6;0;found;ok
+Энтро;Elite;ПВХ, Эмаль;12;12;0;found;ok
+Энтро;Pure;ПВХ, Эмаль;12;12;0;found;ok
+Энтро;Degree;ПВХ, Эмаль;12;12;0;found;ok
+Энтро;Insignia;ПВХ, Эмаль;8;8;0;found;ok
+Энтро;Gala;ПВХ, Эмаль;18;18;0;found;ok
+Энтро;Architect;ПВХ, Эмаль;8;8;0;found;ok
+АСД;Все модели;;0;0;0;needs_manual_review;"no rows in catalog; collection_to_fill_manually"

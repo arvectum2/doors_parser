@@ -1,0 +1,194 @@
+sites:
+  - key: dver
+    manufacturer: "Скамбио Порте"
+    base_url: "https://dver.com/"
+    adapter: dver_com
+    seeds:
+      - "https://dver.com/mezhkomnatnye-dveri/"
+      - "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/"
+      - "https://dver.com/mezhkomnatnye-dveri/dveri-krashenye-emal/"
+      - "https://dver.com/mezhkomnatnye-dveri/rasprodazha/"
+      - "https://dver.com/vkhodnye-dveri-metall/"
+      - "https://dver.com/mezhkomnatnye-dveri/dveri-pod-pokrasku/"
+      # Collection filter URLs for missing П-series lines (dver.com uses ?collection= for series pages)
+      # These URLs must be included directly because ? in URLs is normally skipped
+      # ПСЛ
+      - "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%9B&brand=PROFILO+PORTE"
+      # ПСЕ
+      - "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%95&brand=PROFILO+PORTE"
+      # ПСЦ модерн
+      - "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%A6+%D0%BC%D0%BE%D0%B4%D0%B5%D1%80%D0%BD&brand=PROFILO+PORTE"
+      # ПСЦ классика
+      - "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%A6+%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0&brand=PROFILO+PORTE"
+      # ПХ AL кромка Черный
+      - "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A5+AL+%D0%BA%D1%80%D0%BE%D0%BC%D0%BA%D0%B0+%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D0%B9&brand=PROFILO+PORTE"
+      # ПХ AL кромка Хром
+      - "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A5+AL+%D0%BA%D1%80%D0%BE%D0%BC%D0%BA%D0%B0+%D0%A5%D1%80%D0%BE%D0%BC&brand=PROFILO+PORTE"
+      # П АБС кромка Черный
+      - "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F+%D0%90%D0%91%D0%A1+%D0%BA%D1%80%D0%BE%D0%BC%D0%BA%D0%B0+%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D0%B9&brand=PROFILO+PORTE"
+    door_type: "межкомнатная"
+    max_seed_pages: 5
+    # max_pages must be high enough to include all seeds + collected links
+    max_pages: 250
+  - key: hausdoors
+    manufacturer: "Хаусдорс"
+    base_url: "https://hausdoors.ru/"
+    adapter: hausdoors
+    seeds:
+      - "https://hausdoors.ru/"
+      - "https://aluminum.hausdoors.ru/"
+    door_type: "оба"
+    line_url_map:
+      "https://aluminum.hausdoors.ru/": "Входные аллюминиевые"
+      "https://hausdoors.ru/dveri-pod-pokrasku": "Под покраску"
+      "https://hausdoors.ru/dveri-free-line": "Свобода"
+      "https://hausdoors.ru/dveri-new-classic": "Новая классика"
+      "https://hausdoors.ru/dveri-soft-classic": "Современная классика"
+      "https://hausdoors.ru/dveri-minimalism": "Минимализм"
+      "https://hausdoors.ru/dveri-s-zerkalom": "С зеркалом"
+      "https://hausdoors.ru/dveri-classic": "Классико"
+      "https://hausdoors.ru/dveri-modern": "Модерн"
+  - key: olymp
+    manufacturer: "Олимп"
+    base_url: "https://olymp-doors.ru/"
+    adapter: olymp
+    seeds:
+      - "https://olymp-doors.ru/katalog-1"
+    door_type: "межкомнатная"
+    line_url_map:
+      "https://olymp-doors.ru/stile": "Стиль"
+      "https://olymp-doors.ru/stile/": "Стиль"
+      "https://olymp-doors.ru/knizhka": "Книжки"
+      "https://olymp-doors.ru/gamma": "Гамма"
+      "https://olymp-doors.ru/magnum": "Магнум"
+      "https://olymp-doors.ru/rich": "Рич"
+      "https://olymp-doors.ru/singl": "Сингл"
+      "https://olymp-doors.ru/modern": "Модерн"
+  - key: aelita
+    manufacturer: "Аэлита"
+    base_url: "https://aelita-doors.ru/"
+    seeds:
+      - "https://aelita-doors.ru/products/"
+    door_type: "межкомнатная"
+    adapter: aelita
+    line_url_map:
+      "https://aelita-doors.ru/products/doors/alfa": "Альфа"
+      "https://aelita-doors.ru/products/doors/emma": "Эмма"
+      "https://aelita-doors.ru/products/doors/element": "Элемент"
+      "https://aelita-doors.ru/products/doors/felino": "Фелино"
+      "https://aelita-doors.ru/products/doors/malta": "Мальта"
+      "https://aelita-doors.ru/products/doors/meryl": "Мэрил"
+      "https://aelita-doors.ru/products/doors/studio": "Студио"
+      "https://aelita-doors.ru/products/doors/demand": "Дэманд"
+      "https://aelita-doors.ru/products/doors/fregio": "Фреддио"
+      "https://aelita-doors.ru/products/doors/level": "Лэвэл"
+      "https://aelita-doors.ru/products/doors/trend": "Тренд"
+      "https://aelita-doors.ru/products/doors/plier": "Плайер"
+      "https://aelita-doors.ru/products/doors/insight": "Инсайт"
+      "https://aelita-doors.ru/products/doors/infinity": "Инфинити"
+      "https://aelita-doors.ru/products/doors/boca": "Бока"
+      "https://aelita-doors.ru/products/doors/britain": "Британия"
+      "https://aelita-doors.ru/products/doors/nature": "Натур"
+      "https://aelita-doors.ru/products/doors/perfect": "Перфект"
+      "https://aelita-doors.ru/products/doors/sky": "Скай"
+      "https://aelita-doors.ru/products/doors/twin": "Твин"
+      "https://aelita-doors.ru/products/doors/antique": "Антик Лайн"
+      "https://aelita-doors.ru/products/doors/flex": "Флэкс"
+      "https://aelita-doors.ru/products/doors/grace": "Грейс"
+      "https://aelita-doors.ru/products/doors/classik": "Классика"
+  - key: lord
+    manufacturer: "Лорд"
+    base_url: "https://dveri-lord.ru/"
+    adapter: lord
+    seeds:
+      - "https://dveri-lord.ru/catalog/"
+    door_type: "межкомнатная"
+    strict_match: true
+    line_url_map:
+      "https://dveri-lord.ru/product/prima/": "Примо"
+      "https://dveri-lord.ru/product/rilievo/": "Риливево"
+  - key: komfort
+    manufacturer: "Комфорт"
+    base_url: "https://komfortdoors.ru/"
+    adapter: komfort
+    seeds:
+      - "https://komfortdoors.ru/"
+      - "https://komfortdoors.ru/emal/"
+      - "https://komfortdoors.ru/new-line/"
+      - "https://komfortdoors.ru/slope/"
+      - "https://komfortdoors.ru/true/"
+      - "https://komfortdoors.ru/gift/"
+      - "https://komfortdoors.ru/art/"
+      - "https://komfortdoors.ru/premier/"
+      - "https://komfortdoors.ru/malta/"
+      - "https://komfortdoors.ru/neo/"
+      - "https://komfortdoors.ru/molding/"
+      - "https://komfortdoors.ru/turin/"
+    door_type: "межкомнатная"
+    line_url_map:
+      "https://komfortdoors.ru/emal/": "Эмаль"
+      "https://komfortdoors.ru/new-line/": "New line"
+      "https://komfortdoors.ru/slope/": "Slope"
+      "https://komfortdoors.ru/true/": "True"
+      "https://komfortdoors.ru/gift/": "Gift"
+      "https://komfortdoors.ru/art/": "Art"
+      "https://komfortdoors.ru/premier/": "Premier"
+      "https://komfortdoors.ru/malta/": "Malta"
+      "https://komfortdoors.ru/neo/": "Neo"
+      "https://komfortdoors.ru/molding/": "Molding"
+      "https://komfortdoors.ru/turin/": "Turin"
+  - key: dveriregionov
+    manufacturer: "Двери регионов"
+    base_url: "https://www.dveriregionov.ru/"
+    seeds:
+      - "https://www.dveriregionov.ru/catalog/"
+      - "https://www.dveriregionov.ru/catalog/mezhkomnatnye_dveri/"
+      - "https://www.dveriregionov.ru/catalog/mezhkomnatnye_dveri/belorusskie_shpon/"
+      - "https://www.dveriregionov.ru/catalog/mezhkomnatnye_dveri/mezhkomnatnye_dveri_emal/"
+      - "https://www.dveriregionov.ru/catalog/mezhkomnatnye_dveri/iz_massiva/"
+      - "https://www.dveriregionov.ru/catalog/mezhkomnatnye_dveri/ekoshpon/"
+    door_type: "межкомнатная"
+    line_url_map:
+      "https://www.dveriregionov.ru/catalog/mezhkomnatnye_dveri/belorusskie_shpon/": "Натуральный шпон"
+      "https://www.dveriregionov.ru/catalog/mezhkomnatnye_dveri/mezhkomnatnye_dveri_emal/": "Эмаль и лак"
+      "https://www.dveriregionov.ru/catalog/mezhkomnatnye_dveri/iz_massiva/": "Массив"
+      "https://www.dveriregionov.ru/catalog/mezhkomnatnye_dveri/ekoshpon/": "Экошпон"
+  - key: entro
+    manufacturer: "Энтро"
+    base_url: "https://entro-design.ru/"
+    adapter: entro
+    seeds:
+      - "https://entro-design.ru/catalog"
+    door_type: "межкомнатная"
+  - key: asdoors
+    manufacturer: "АСД"
+    base_url: "https://as-doors.ru/"
+    adapter: asd
+    seeds:
+      - "https://as-doors.ru/onstock/"
+      - "https://as-doors.ru/doors/zakaznyie.html"
+    door_type: "входная"
+  - key: termo
+    manufacturer: "Термодур"
+    base_url: "https://termo-door.ru/"
+    seeds:
+      - "https://termo-door.ru/"
+      - "https://termo-door.ru/category/monolit/"
+      - "https://termo-door.ru/category/arktika/"
+      - "https://termo-door.ru/category/flagman/"
+      - "https://termo-door.ru/category/grey/"
+      - "https://termo-door.ru/category/latsio/"
+      - "https://termo-door.ru/category/smart/"
+    door_type: "входная"
+    line_url_map:
+      "https://termo-door.ru/category/monolit/vertikal-grey/": "Термо вертикаль грей"
+      "https://termo-door.ru/category/sibir-termo-premium-vertikal-grey/": "Термо вертикаль грей"
+      "https://termo-door.ru/category/latsio/": "Термо лацио"
+      "https://termo-door.ru/category/monolit/": "Термо вертикаль венге"
+      "https://termo-door.ru/category/monolit/vertikal-venge/": "Термо вертикаль венге"
+      "https://termo-door.ru/category/vertikal-venge_1/": "Термо вертикаль венге"
+      "https://termo-door.ru/category/monolit/oregon-venge/": "Термо орегон венге"
+      "https://termo-door.ru/category/oregon-venge_1/": "Термо премиум грей"
+      "https://termo-door.ru/category/monolit/virginia-venge/": "Термо виргиния венге"
+      "https://termo-door.ru/category/modena-venge/": "Термо модена венге"
+      "https://termo-door.ru/category/zerkalo-steklo/": "Зеркало/стекло"
