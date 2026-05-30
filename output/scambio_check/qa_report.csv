@@ -1,0 +1,22 @@
+﻿producer;target_line;expected_material;rows_count;unique_models_count;with_image_count;missing_image_count;needs_review_count;bad_image_count;status;comment
+Скамбио Порте;Смальта Деко;эмаль;55;55;55;0;0;0;found;ok
+Скамбио Порте;Смальта Белла;эмаль;2;2;2;0;0;0;found;ok
+Скамбио Порте;Смальта Галант;эмаль;3;3;3;0;0;0;found;ok
+Скамбио Порте;Смальта Лайн;эмаль;11;11;11;0;0;0;found;ok
+Скамбио Порте;Смальта Нова;эмаль;4;4;4;0;0;0;found;ok
+Скамбио Порте;Смальта Риф;эмаль;2;2;2;0;0;0;found;ok
+Скамбио Порте;Смальта Шарм;эмаль;4;4;2;2;2;0;needs_review;"with_image=2; missing_image=2; needs_review=2; bad_image=0"
+Скамбио Порте;ПС;ПВХ;19;19;19;0;0;0;found;ok
+Скамбио Порте;ПСЛ;ПВХ;0;0;0;0;0;0;not_found;no matched products in source catalog + dver.com/xml/sitemap.xml snapshot
+Скамбио Порте;ПСК;ПВХ;4;4;4;0;0;0;found;ok
+Скамбио Порте;ПСЦ Модерн;ПВХ;11;11;11;0;0;0;found;ok
+Скамбио Порте;ПСЦ Классика;ПВХ;1;1;1;0;0;0;found;ok
+Скамбио Порте;ПСУ;ПВХ;5;5;5;0;0;0;found;ok
+Скамбио Порте;ПХ Алл кромка Черный;ПВХ;8;8;8;0;0;0;found;ok
+Скамбио Порте;ПХ Алл кромка Хром;ПВХ;2;2;2;0;0;0;found;ok
+Скамбио Порте;ПСТ;ПВХ;22;22;22;0;0;0;found;ok
+Скамбио Порте;ПСЕ;ПВХ;0;0;0;0;0;0;not_found;no matched products in source catalog + dver.com/xml/sitemap.xml snapshot
+Скамбио Порте;ПДЕ;ПВХ;9;9;9;0;0;0;found;ok
+Скамбио Порте;П АБС кромка Черный;ПВХ;11;11;11;0;0;0;found;ok
+Скамбио Порте;П;ПВХ;29;29;29;0;0;0;found;ok
+Скамбио Порте;Инвизибл;Под покраску;9;9;9;0;0;0;found;ok

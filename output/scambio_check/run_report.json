@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-05-30T20:22:39.355062",
+  "mode": "scambio_rebuild_from_existing_catalog",
+  "source_catalog": "C:\\Users\\GN\\Desktop\\doors_parser_ready_fix\\output\\doors_catalog.csv",
+  "total_rows": 211,
+  "target_lines_total": 21,
+  "target_lines_found": 19,
+  "missing_image_rows": 2,
+  "needs_review_rows": 2,
+  "duplicates_removed": 231
+}
