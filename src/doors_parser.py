@@ -4,6 +4,7 @@ import argparse
 import csv
 import json
 import re
+import shutil
 import sys
 import traceback
 from dataclasses import asdict
@@ -343,7 +344,6 @@ def write_image_audit(path: Path, rows: list[dict]) -> None:
     fields = [
         "target_line",
         "model_name",
-        "old_image_url",
         "selected_image_url",
         "rejected_image_urls",
         "image_status",
@@ -356,7 +356,11 @@ def write_image_audit(path: Path, rows: list[dict]) -> None:
             w.writerow({k: r.get(k, "") for k in fields})
 
 
-def print_scambio_console_summary(rows: list[DoorItem], targets: list[TargetLine]) -> None:
+def print_scambio_console_summary(
+    rows: list[DoorItem],
+    targets: list[TargetLine],
+    site_log: dict | None = None,
+) -> None:
     target_lines = [t.target_line for t in targets]
     grouped: dict[str, list[DoorItem]] = defaultdict(list)
     for r in rows:
@@ -375,6 +379,16 @@ def print_scambio_console_summary(rows: list[DoorItem], targets: list[TargetLine
     needs_review = sum(1 for r in rows if r.status == "needs_review")
     print(f"    строк без фото: {missing_image}")
     print(f"    needs_review: {needs_review}")
+    if site_log:
+        print(f"    удалено комплектующих: {site_log.get('removed_components_count', 0)}")
+        print(f"    плохих фото отклонено: {site_log.get('rejected_bad_images_count', 0)}")
+
+    not_found_lines = [t for t in target_lines if normalize(t) not in grouped]
+    print("    not_found линейки:")
+    if not_found_lines:
+        print("      - " + "; ".join(not_found_lines))
+    else:
+        print("      - нет")
 
     suspicious_urls = Counter(
         (r.image_url or "").strip()
@@ -397,6 +411,31 @@ def print_scambio_console_summary(rows: list[DoorItem], targets: list[TargetLine
     for mn, cnt in suspicious_models.most_common(20):
         print(f"      - {cnt}x {mn}")
     if not suspicious_models:
+        print("      - нет")
+
+    important_lines = {
+        "смальта деко",
+        "смальта белла",
+        "смальта галант",
+        "смальта нова",
+        "смальта шарм",
+        "инвизибл",
+    }
+    print("    примеры строк (до 10) для Смальта*/Инвизибл:")
+    sample_rows = [
+        r for r in rows
+        if normalize(r.line) in important_lines
+    ][:10]
+    for r in sample_rows:
+        print(f"      - [{r.line}] {r.model_name} | status={r.status}")
+    if not sample_rows:
+        print("      - нет")
+
+    print("    примеры image_url (10):")
+    images = [r.image_url for r in rows if r.image_url][:10]
+    for url in images:
+        print(f"      - {url}")
+    if not images:
         print("      - нет")
 
 def write_qa_report(path: Path, all_rows: list[DoorItem], targets: list[TargetLine],
@@ -443,7 +482,12 @@ def write_qa_report(path: Path, all_rows: list[DoorItem], targets: list[TargetLi
             if rows_count == 0:
                 status = "not_found"
                 checked_urls = checks_map.get(key, [])
-                if checked_urls:
+                if normalize(target.manufacturer) == normalize("Скамбио Порте"):
+                    comment = "checked_xml_feed_and_sitemap_no_models_found"
+                    if checked_urls:
+                        checked_joined = " | ".join(checked_urls[:4])
+                        comment = f"{comment}; checked: {checked_joined}"
+                elif checked_urls:
                     checked_joined = " | ".join(checked_urls[:4])
                     comment = f"collection_not_found_on_site; checked: {checked_joined}"
                 else:
@@ -683,6 +727,12 @@ def main() -> None:
     for f in out_dir.glob("partial_*"):
         f.unlink()
 
+    # For Scambio-only checks keep output folder flat (no stale subfolders like "скамбио порте")
+    if args.only and normalize(args.only) == normalize("Скамбио Порте"):
+        for child in out_dir.iterdir():
+            if child.is_dir():
+                shutil.rmtree(child, ignore_errors=True)
+
     # Summary with status breakdown
     found_total = sum(1 for r in all_rows if r.status == "found")
     review_total = sum(1 for r in all_rows if r.status == "needs_review")
@@ -697,7 +747,12 @@ def main() -> None:
     print(f"    Errors: {len(report['errors'])}")
     print(f"    Output: {out_dir.resolve()}")
     if args.only and normalize(args.only) == normalize("Скамбио Порте"):
-        print_scambio_console_summary(all_rows, targets)
+        scambio_log = None
+        for producer_name, site_log in report.get("sites", {}).items():
+            if normalize(producer_name) == normalize("Скамбио Порте"):
+                scambio_log = site_log
+                break
+        print_scambio_console_summary(all_rows, targets, scambio_log)
     print(f"{'=' * 60}")
 
 

@@ -1,0 +1,11 @@
+﻿producer;rows_count;target_lines_count;missing_image_count;needs_review_count;material_filled_count;suspicious_image_count;suspicious_model_name_count;duplicate_model_name_count;comment
+Скамбио Порте;890;21;0;246;890;0;0;0;ok
+Олимп;356;16;1;1;356;1;0;0;ok
+Хаусдорс;578;18;2;535;576;577;0;0;ok
+Лорд;932;41;4;4;932;8;0;0;ok
+Аэлита;335;25;2;2;335;2;0;0;ok
+Энтро;320;31;320;320;320;320;0;0;ok
+Комфорт;58;12;11;11;58;11;0;0;ok
+Двери регионов;40;5;4;4;40;40;0;0;ok
+Термодур;205;11;23;27;0;23;0;0;ok
+АСД;199;1;0;194;0;20;0;0;ok

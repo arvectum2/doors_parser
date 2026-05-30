@@ -1,11 +1,152 @@
 {
-  "generated_at": "2026-05-30T20:22:39.355062",
-  "mode": "scambio_rebuild_from_existing_catalog",
-  "source_catalog": "C:\\Users\\GN\\Desktop\\doors_parser_ready_fix\\output\\doors_catalog.csv",
-  "total_rows": 211,
-  "target_lines_total": 21,
-  "target_lines_found": 19,
-  "missing_image_rows": 2,
-  "needs_review_rows": 2,
-  "duplicates_removed": 231
+  "start_time": "2026-05-30T21:19:42.106849",
+  "total_targets": 21,
+  "total_lines_found": 21,
+  "sites": {
+    "Скамбио Порте": {
+      "base_url": "https://dver.com/",
+      "candidate_pages": 2174,
+      "pages_processed": 2174,
+      "models_found": 1269,
+      "targets": {
+        "Смальта Деко": 152,
+        "Смальта Белла": 2,
+        "Смальта Галант": 2,
+        "Смальта Лайн": 51,
+        "Смальта Нова": 16,
+        "Смальта Риф": 18,
+        "Смальта Шарм": 86,
+        "ПС": 36,
+        "ПСЛ": 24,
+        "ПСК": 24,
+        "ПСЦ Модерн": 110,
+        "ПСЦ Классика": 10,
+        "ПСУ": 68,
+        "ПХ Алл кромка Черный": 169,
+        "ПХ Алл кромка Хром": 198,
+        "ПСТ": 37,
+        "ПСЕ": 12,
+        "ПДЕ": 16,
+        "П АБС кромка Черный": 94,
+        "П": 134,
+        "Инвизибл": 10
+      },
+      "errors": [],
+      "collection_checks": {
+        "Смальта Деко": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-krashenye-emal/?collection=%D0%A1%D0%BC%D0%B0%D0%BB%D1%8C%D1%82%D0%B0-%D0%94%D0%B5%D0%BA%D0%BE"
+        ],
+        "Смальта Белла": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-krashenye-emal/?collection=%D0%A1%D0%BC%D0%B0%D0%BB%D1%8C%D1%82%D0%B0-%D0%91%D1%8D%D0%BB%D0%BB%D0%B0",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-krashenye-emal/?collection=%D0%A1%D0%BC%D0%B0%D0%BB%D1%8C%D1%82%D0%B0-%D0%91%D0%B5%D0%BB%D0%BB%D0%B0"
+        ],
+        "Смальта Галант": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-krashenye-emal/?collection=%D0%A1%D0%BC%D0%B0%D0%BB%D1%8C%D1%82%D0%B0-%D0%93%D0%B0%D0%BB%D0%B0%D0%BD%D1%82"
+        ],
+        "Смальта Лайн": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-krashenye-emal/?collection=%D0%A1%D0%BC%D0%B0%D0%BB%D1%8C%D1%82%D0%B0-%D0%9B%D0%B0%D0%B9%D0%BD"
+        ],
+        "Смальта Нова": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-krashenye-emal/?collection=%D0%A1%D0%BC%D0%B0%D0%BB%D1%8C%D1%82%D0%B0-%D0%9D%D0%BE%D0%B2%D0%B0"
+        ],
+        "Смальта Риф": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-krashenye-emal/?collection=%D0%A1%D0%BC%D0%B0%D0%BB%D1%8C%D1%82%D0%B0-%D0%A0%D0%B8%D1%84"
+        ],
+        "Смальта Шарм": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-krashenye-emal/?collection=%D0%A1%D0%BC%D0%B0%D0%BB%D1%8C%D1%82%D0%B0-%D0%A8%D0%B0%D1%80%D0%BC"
+        ],
+        "ПС": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1"
+        ],
+        "ПСЛ": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%9B"
+        ],
+        "ПСК": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%9A"
+        ],
+        "ПСЦ Модерн": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%A6+%D0%BC%D0%BE%D0%B4%D0%B5%D1%80%D0%BD"
+        ],
+        "ПСЦ Классика": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%A6+%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0"
+        ],
+        "ПСУ": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%A3"
+        ],
+        "ПХ Алл кромка Черный": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A5+AL+%D0%BA%D1%80%D0%BE%D0%BC%D0%BA%D0%B0+%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D0%B9",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A5+%D0%90%D0%BB%D0%BB+%D0%BA%D1%80%D0%BE%D0%BC%D0%BA%D0%B0+%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D0%B9"
+        ],
+        "ПХ Алл кромка Хром": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A5+AL+%D0%BA%D1%80%D0%BE%D0%BC%D0%BA%D0%B0+%D0%A5%D1%80%D0%BE%D0%BC",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A5+%D0%90%D0%BB%D0%BB+%D0%BA%D1%80%D0%BE%D0%BC%D0%BA%D0%B0+%D0%A5%D1%80%D0%BE%D0%BC"
+        ],
+        "ПСТ": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%A2"
+        ],
+        "ПСЕ": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%A1%D0%95"
+        ],
+        "ПДЕ": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F%D0%94%D0%95"
+        ],
+        "П АБС кромка Черный": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F+%D0%90%D0%91%D0%A1+%D0%BA%D1%80%D0%BE%D0%BC%D0%BA%D0%B0+%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D0%B9"
+        ],
+        "П": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-ekoshpon/?collection=%D0%A1%D0%B5%D1%80%D0%B8%D1%8F+%D0%9F"
+        ],
+        "Инвизибл": [
+          "https://dver.com/xml/sitemap.xml",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-pod-pokrasku/?collection=%D0%98%D0%BD%D0%B2%D0%B8%D0%B7%D0%B8%D0%B1%D0%BB",
+          "https://dver.com/mezhkomnatnye-dveri/dveri-pod-pokrasku/?collection=Invisible"
+        ]
+      },
+      "removed_components_count": 0,
+      "rejected_bad_images_count": 20167,
+      "line_infer_stats": {
+        "psc_numeric_heuristic": 120,
+        "series_pattern_match": 181,
+        "p_pattern_match": 134,
+        "p_abs_black_pattern_match": 94,
+        "ph_chrome_default_pattern_match": 198,
+        "ph_black_pattern_match": 169,
+        "ps_pattern_match": 36,
+        "name_pattern_match": 133,
+        "smalta_numeric_heuristic": 194,
+        "invisible_pattern_match": 10
+      },
+      "items": 1269,
+      "manufacturer": "Скамбио Порте",
+      "image_audit_count": 1269
+    }
+  },
+  "errors": [],
+  "completed_sites": [
+    "скамбио порте"
+  ],
+  "total_items": 890,
+  "duplicates_removed": 379,
+  "image_audit_rows": 1269,
+  "end_time": "2026-05-30T22:22:56.358009"
 }

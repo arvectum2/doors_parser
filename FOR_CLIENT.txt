@@ -1,31 +1,42 @@
-Парсер собран и подготовлен к запуску.
-Основной результат находится в папке output:
-- doors_catalog.xlsx — основная таблица для проверки (3691 модель);
-- wordpress_import.csv — файл для дальнейшей загрузки в WordPress/WooCommerce;
-- not_found.csv — пуст (все 182 линейки представлены в каталоге);
-- duplicates_report.csv — пуст (дубли обработаны на этапе чистки);
-- qa_report.csv — детальный отчёт по каждой линейке с материалом из таблицы заказчика;
-- run_report.json — технический отчёт запуска.
+Финальный пакет doors_parser_final собран.
 
-Цены не собирались (колонка удалена).
-Фото не скачивались, сохранены ссылки на изображения.
-Материал заполнен из таблицы "Линейки производителей":
-- 3285 строк с заполненным материалом (covering_from_source);
-- 405 строк без материала (Термодур, АСД, Хаусдорс: в таблице линеек данные отсутствуют).
-Для всех моделей заполнен тип двери (door_type): входная или межкомнатная.
+Главный результат:
+- output/final_merged/doors_catalog.xlsx
+- output/final_merged/doors_catalog.csv
+- output/final_merged/wordpress_import.csv
 
-Обработка изображений:
-- Дубли (одна модель с разных страниц) сведены к одной записи с лучшим фото;
-- Варианты вида "-- вариант N" не схлопываются — каждый остаётся отдельной строкой;
-- Миниатюры Tilda CDN (/resize/20x/) заменены на исходные (static.tildacdn.com);
-- Служебные изображения (логотипы, иконки, _sale, qr.png, Tilda /empty/, WordPress cache/thumb < 400px) заменены на реальные фото или очищены;
-- Изображения WordPress cache/thumb с размером ≥ 400px сохранены;
-- Строки без фото помечены needs_review (26 строк осталось без изображения);
-- 32 коллекции не найдены на сайтах — добавлены строки-заглушки.
+Сводка финальной сборки (из output/final_merged/run_report.json):
+- total_rows: 3913
+- producers_count: 10
+- target_lines_total: 182
+- target_lines_with_real_models: 164
+- target_lines_as_placeholder: 18
+- target_lines_not_found: 0
+- rows_with_image: 3546
+- rows_without_image: 367
+- material_filled_count: 3507
+- needs_review_count: 1344
+- bad_images_removed: 320
 
-Особенности:
-- АСД: коллекция "Все модели" заменена на "Уточнить коллекцию" — требуется ручное заполнение.
-- 32 коллекции (Скамбио: Смальта Деко, Белла, Галант, Нова, Шарм, ПСЛ, ПСЦ, ПХ, П АБС, ПСЕ, Инвизибл; Хаусдорс: Порта, Входные металлические; Олимп: Директ и др.) не найдены на сайтах — добавлены заглушки.
+Скамбио:
+- старый блок Скамбио из общего каталога удалён;
+- вставлен новый блок из output/scambio_check/doors_catalog.csv;
+- в финальном каталоге: 890 строк, 21/21 линеек;
+- присутствуют ПСЛ, ПСЕ, Инвизибл и все целевые линейки Смальта.
 
-Итого: 182/182 линеек (100%), 10 производителей, 3691 модель.
-Из них 26 строк без изображения (Скамбио Порте — 23, Аэлита — 2, Двери регионов — 1).
+Проверочные выгрузки по производителям:
+- output/final_merged/check_by_producer/*.xlsx
+- output/final_merged/check_by_producer/*.csv
+- output/final_merged/check_by_producer/audit_summary.csv
+- output/final_merged/check_by_producer/samples_for_visual_check.xlsx
+
+Технические отчёты:
+- output/final_merged/qa_report.csv
+- output/final_merged/not_found.csv
+- output/final_merged/image_audit.csv
+- output/final_merged/duplicates_report.csv
+- output/final_merged/run_report.json
+
+Важно:
+- строки со статусом needs_review требуют ручной визуальной проверки;
+- в финальном каталоге не используется старая версия блока Скамбио.

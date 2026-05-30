@@ -1,0 +1,183 @@
+﻿producer;target_line;expected_material;rows_count;unique_models_count;with_image_count;missing_image_count;needs_review_count;bad_image_count;status;comment
+Скамбио Порте;Смальта Деко;эмаль;125;125;125;0;125;0;needs_review;"with_image=125; missing_image=0; needs_review=125; bad_image=0"
+Скамбио Порте;Смальта Белла;эмаль;2;2;2;0;2;0;needs_review;"with_image=2; missing_image=0; needs_review=2; bad_image=0"
+Скамбио Порте;Смальта Галант;эмаль;2;2;2;0;2;0;needs_review;"with_image=2; missing_image=0; needs_review=2; bad_image=0"
+Скамбио Порте;Смальта Лайн;эмаль;33;33;33;0;12;0;needs_review;"with_image=33; missing_image=0; needs_review=12; bad_image=0"
+Скамбио Порте;Смальта Нова;эмаль;11;11;11;0;11;0;needs_review;"with_image=11; missing_image=0; needs_review=11; bad_image=0"
+Скамбио Порте;Смальта Риф;эмаль;16;16;16;0;0;0;found;ok
+Скамбио Порте;Смальта Шарм;эмаль;83;83;83;0;6;0;needs_review;"with_image=83; missing_image=0; needs_review=6; bad_image=0"
+Скамбио Порте;ПС;ПВХ;25;25;25;0;0;0;found;ok
+Скамбио Порте;ПСЛ;ПВХ;16;16;16;0;0;0;found;ok
+Скамбио Порте;ПСК;ПВХ;22;22;22;0;0;0;found;ok
+Скамбио Порте;ПСЦ Модерн;ПВХ;83;83;83;0;83;0;needs_review;"with_image=83; missing_image=0; needs_review=83; bad_image=0"
+Скамбио Порте;ПСЦ Классика;ПВХ;5;5;5;0;5;0;needs_review;"with_image=5; missing_image=0; needs_review=5; bad_image=0"
+Скамбио Порте;ПСУ;ПВХ;53;53;53;0;0;0;found;ok
+Скамбио Порте;ПХ Алл кромка Черный;ПВХ;94;94;94;0;0;0;found;ok
+Скамбио Порте;ПХ Алл кромка Хром;ПВХ;116;116;116;0;0;0;found;ok
+Скамбио Порте;ПСТ;ПВХ;35;35;35;0;0;0;found;ok
+Скамбио Порте;ПСЕ;ПВХ;10;10;10;0;0;0;found;ok
+Скамбио Порте;ПДЕ;ПВХ;8;8;8;0;0;0;found;ok
+Скамбио Порте;П АБС кромка Черный;ПВХ;54;54;54;0;0;0;found;ok
+Скамбио Порте;П;ПВХ;87;87;87;0;0;0;found;ok
+Скамбио Порте;Инвизибл;Под покраску;10;10;10;0;0;0;found;ok
+Хаусдорс;Фактурные линии;ПВХ;14;14;14;0;12;0;needs_review;"with_image=14; missing_image=0; needs_review=12; bad_image=0"
+Хаусдорс;Классико;ПВХ;95;95;95;0;88;0;needs_review;"with_image=95; missing_image=0; needs_review=88; bad_image=0"
+Хаусдорс;Порта;ПВХ;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Хаусдорс;Новая классика;ПВХ;14;14;14;0;12;0;needs_review;"with_image=14; missing_image=0; needs_review=12; bad_image=0"
+Хаусдорс;Вертикаль;Эмаль;12;12;12;0;10;0;needs_review;"with_image=12; missing_image=0; needs_review=10; bad_image=0"
+Хаусдорс;Минимализм;ПВХ;14;14;14;0;12;0;needs_review;"with_image=14; missing_image=0; needs_review=12; bad_image=0"
+Хаусдорс;Современная классика;ПВХ;14;14;14;0;12;0;needs_review;"with_image=14; missing_image=0; needs_review=12; bad_image=0"
+Хаусдорс;Атмосфера;Эмаль;11;11;11;0;11;0;needs_review;"with_image=11; missing_image=0; needs_review=11; bad_image=0"
+Хаусдорс;Элегант;Эмаль;10;10;10;0;10;0;needs_review;"with_image=10; missing_image=0; needs_review=10; bad_image=0"
+Хаусдорс;Гармония;Эмаль;11;11;11;0;11;0;needs_review;"with_image=11; missing_image=0; needs_review=11; bad_image=0"
+Хаусдорс;Свобода;Эмаль;16;16;16;0;14;0;needs_review;"with_image=16; missing_image=0; needs_review=14; bad_image=0"
+Хаусдорс;Геометрия;Эмаль;11;11;11;0;11;0;needs_review;"with_image=11; missing_image=0; needs_review=11; bad_image=0"
+Хаусдорс;Сияние;Эмаль;12;12;12;0;12;0;needs_review;"with_image=12; missing_image=0; needs_review=12; bad_image=0"
+Хаусдорс;Сибирь;ШПОН;11;11;11;0;10;0;needs_review;"with_image=11; missing_image=0; needs_review=10; bad_image=0"
+Хаусдорс;Под покраску;под покраску;134;134;134;0;123;0;needs_review;"with_image=134; missing_image=0; needs_review=123; bad_image=0"
+Хаусдорс;С зеркалом;под покраску;196;196;196;0;185;0;needs_review;"with_image=196; missing_image=0; needs_review=185; bad_image=0"
+Хаусдорс;Входные аллюминиевые;;1;1;1;0;0;0;found;ok
+Хаусдорс;Входные металлические;;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Олимп;Гамма;ШПОН;10;10;10;0;0;0;found;ok
+Олимп;Магнум;ШПОН;8;8;8;0;0;0;found;ok
+Олимп;Директ +;ШПОН;31;31;30;1;1;0;needs_review;"with_image=30; missing_image=1; needs_review=1; bad_image=0"
+Олимп;Кинк;ШПОН;31;31;31;0;0;0;found;ok
+Олимп;Нюанс;ШПОН;9;9;9;0;0;0;found;ok
+Олимп;Галео;ШПОН;33;33;33;0;0;0;found;ok
+Олимп;Рич;ШПОН;9;9;9;0;0;0;found;ok
+Олимп;Директ;ШПОН;31;31;30;1;1;0;needs_review;"with_image=30; missing_image=1; needs_review=1; bad_image=0"
+Олимп;Денди;ШПОН;9;9;9;0;0;0;found;ok
+Олимп;Сингл;ШПОН;13;13;13;0;0;0;found;ok
+Олимп;Токио;ШПОН;31;31;31;0;0;0;found;ok
+Олимп;Классика;ШПОН;31;31;31;0;0;0;found;ok
+Олимп;Лофт;ШПОН;31;31;31;0;0;0;found;ok
+Олимп;Модерн;ШПОН;30;30;30;0;0;0;found;ok
+Олимп;Стиль;ШПОН;18;18;18;0;0;0;found;ok
+Олимп;Венир;ШПОН;31;31;31;0;0;0;found;ok
+Олимп;Книжки;ШПОН;31;31;31;0;0;0;found;ok
+Аэлита;Альфа;ПВХ;12;12;12;0;0;0;found;ok
+Аэлита;Бока;ПВХ;8;8;8;0;0;0;found;ok
+Аэлита;Британия;ПВХ;20;20;20;0;0;0;found;ok
+Аэлита;Классика;ПВХ;10;10;10;0;0;0;found;ok
+Аэлита;Эмма;ПВХ;36;36;36;0;0;0;found;ok
+Аэлита;Элемент;ПВХ;15;15;15;0;0;0;found;ok
+Аэлита;Фелино;ПВХ;12;12;12;0;0;0;found;ok
+Аэлита;Мальта;ПВХ;10;10;10;0;0;0;found;ok
+Аэлита;Мэрил;ПВХ;13;13;13;0;0;0;found;ok
+Аэлита;Натур;ПВХ;8;8;8;0;0;0;found;ok
+Аэлита;Перфект;ПВХ;14;14;14;0;0;0;found;ok
+Аэлита;Профайн;ПВХ;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Аэлита;Скай;ПВХ;6;6;6;0;0;0;found;ok
+Аэлита;Студио;ПВХ;8;8;8;0;0;0;found;ok
+Аэлита;Твин;ПВХ;17;17;17;0;0;0;found;ok
+Аэлита;Антик Лайн;ПВХ;15;15;15;0;0;0;found;ok
+Аэлита;Антикью;ПВХ;15;15;15;0;0;0;found;ok
+Аэлита;Дэлия;ПВХ;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Аэлита;Дэманд;ПВХ;14;14;14;0;0;0;found;ok
+Аэлита;Флэкс;ПВХ;12;12;12;0;0;0;found;ok
+Аэлита;Фреддио;ПВХ;9;9;9;0;0;0;found;ok
+Аэлита;Грейс;ПВХ;11;11;11;0;0;0;found;ok
+Аэлита;Лэвэл;ПВХ;48;48;48;0;0;0;found;ok
+Аэлита;Тренд;ПВХ;14;14;14;0;0;0;found;ok
+Аэлита;Плайер;ПВХ;6;6;6;0;0;0;found;ok
+Лорд;Фелиция;ПВХ,Эмаль;18;18;18;0;0;0;found;ok
+Лорд;Кантри Вилла;ПВХ,Эмаль;24;24;24;0;0;0;found;ok
+Лорд;Молле;ПВХ,Эмаль;6;6;6;0;0;0;found;ok
+Лорд;Мия Мария;ПВХ,Эмаль;12;12;12;0;0;0;found;ok
+Лорд;Брио;ПВХ,Эмаль;31;31;31;0;0;0;found;ok
+Лорд;Примо;ПВХ,Эмаль;13;13;13;0;0;0;found;ok
+Лорд;Кантри;ПВХ,Эмаль;57;57;57;0;0;0;found;ok
+Лорд;Ренессанс;ПВХ,Эмаль;27;27;27;0;0;0;found;ok
+Лорд;Милетти;ПВХ,Эмаль;19;19;19;0;0;0;found;ok
+Лорд;Дольче;ПВХ,Эмаль;43;43;43;0;0;0;found;ok
+Лорд;Бриз;ПВХ,Эмаль;31;31;31;0;0;0;found;ok
+Лорд;Аванти;ПВХ,Эмаль;10;10;10;0;0;0;found;ok
+Лорд;Ар-деко;ПВХ,Эмаль;12;12;12;0;0;0;found;ok
+Лорд;Элегант;ПВХ,Эмаль;11;11;11;0;0;0;found;ok
+Лорд;Астория;ПВХ,Эмаль;17;17;17;0;0;0;found;ok
+Лорд;Асти;ПВХ,Эмаль;29;29;29;0;0;0;found;ok
+Лорд;Италия;ПВХ,Эмаль;46;46;46;0;0;0;found;ok
+Лорд;Корона;ПВХ,Эмаль;13;13;13;0;0;0;found;ok
+Лорд;Белла;ПВХ,Эмаль;23;23;23;0;0;0;found;ok
+Лорд;Соло;ПВХ,Эмаль;14;14;13;1;1;0;needs_review;"with_image=13; missing_image=1; needs_review=1; bad_image=0"
+Лорд;Техно;ПВХ,Эмаль;12;12;12;0;0;0;found;ok
+Лорд;Мелфорд;ПВХ,Эмаль;14;14;14;0;0;0;found;ok
+Лорд;Стиль;ПВХ,Эмаль;15;15;15;0;0;0;found;ok
+Лорд;Модерн;ПВХ,Эмаль;28;28;28;0;0;0;found;ok
+Лорд;Альфа;ПВХ,Эмаль;10;10;10;0;0;0;found;ok
+Лорд;Атриум;ПВХ,Эмаль;19;19;19;0;0;0;found;ok
+Лорд;Пунта;ПВХ,Эмаль;7;7;4;3;3;0;needs_review;"with_image=4; missing_image=3; needs_review=3; bad_image=0"
+Лорд;Луна;ПВХ,Эмаль;4;4;4;0;0;0;found;ok
+Лорд;Зенит;ПВХ,Эмаль;4;4;4;0;0;0;found;ok
+Лорд;Арея;ПВХ,Эмаль;6;6;6;0;0;0;found;ok
+Лорд;Риливево;ПВХ,Эмаль;11;11;11;0;0;0;found;ok
+Лорд;Баухаус;ПВХ,Эмаль;11;11;11;0;0;0;found;ok
+Лорд;Альтро СФ;ПВХ,Эмаль;60;60;60;0;0;0;found;ok
+Лорд;Альтро МФ;ПВХ,Эмаль;60;60;60;0;0;0;found;ok
+Лорд;Альтро Ф;ПВХ,Эмаль;60;60;60;0;0;0;found;ok
+Лорд;Токко;ПВХ,Эмаль;8;8;8;0;0;0;found;ok
+Лорд;Фигура;ПВХ,Эмаль;27;27;27;0;0;0;found;ok
+Лорд;Италия Арте;ПВХ,Эмаль;34;34;34;0;0;0;found;ok
+Лорд;Люми Лайн;ПВХ,Эмаль;32;32;32;0;0;0;found;ok
+Лорд;Футуристик;ПВХ,Эмаль;40;40;40;0;0;0;found;ok
+Лорд;Эклисси;ПВХ,Эмаль;14;14;14;0;0;0;found;ok
+Комфорт;Эмаль;Эмаль;47;47;47;0;0;0;found;ok
+Комфорт;New line;Эмаль;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Комфорт;Slope;Эмаль;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Комфорт;True;Эмаль;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Комфорт;Gift;Эмаль;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Комфорт;Art;Эмаль;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Комфорт;Premier;Эмаль;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Комфорт;Malta;Эмаль;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Комфорт;Neo;Эмаль;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Комфорт;Molding;Эмаль;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Комфорт;Turin;Эмаль;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Комфорт;Экошпон;ПВХ;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Двери регионов;Массив;массив;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Двери регионов;Натуральный шпон;шпон;19;19;19;0;0;0;found;ok
+Двери регионов;Софт тач;ПВХ;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Двери регионов;Экошпон;ПВХ;1;1;0;1;1;0;needs_review;collection_not_found_on_site
+Двери регионов;Эмаль и лак;Эмаль;18;18;17;1;1;0;needs_review;"with_image=17; missing_image=1; needs_review=1; bad_image=0"
+Термодур;Сибирь термо медь;;104;104;99;5;8;0;needs_review;"with_image=99; missing_image=5; needs_review=8; bad_image=0"
+Термодур;Сибирь термо серебро;;33;33;33;0;1;0;needs_review;"with_image=33; missing_image=0; needs_review=1; bad_image=0"
+Термодур;Сибирь термо премиум;;46;46;41;5;5;0;needs_review;"with_image=41; missing_image=5; needs_review=5; bad_image=0"
+Термодур;Зеркало/стекло;;1;1;0;1;1;0;needs_review;"with_image=0; missing_image=1; needs_review=1; bad_image=0"
+Термодур;Термо лацио;;1;1;0;1;1;0;needs_review;"with_image=0; missing_image=1; needs_review=1; bad_image=0"
+Термодур;Термо вертикаль грей;;2;2;0;2;2;0;needs_review;"with_image=0; missing_image=2; needs_review=2; bad_image=0"
+Термодур;Термо вертикаль венге;;3;3;0;3;3;0;needs_review;"with_image=0; missing_image=3; needs_review=3; bad_image=0"
+Термодур;Термо виргиния венге;;1;1;0;1;1;0;needs_review;"with_image=0; missing_image=1; needs_review=1; bad_image=0"
+Термодур;Термо модена венге;;1;1;0;1;1;0;needs_review;"with_image=0; missing_image=1; needs_review=1; bad_image=0"
+Термодур;Термо орегон венге;;2;2;0;2;2;0;needs_review;"with_image=0; missing_image=2; needs_review=2; bad_image=0"
+Термодур;Термо премиум грей;;11;11;9;2;2;0;needs_review;"with_image=9; missing_image=2; needs_review=2; bad_image=0"
+Энтро;Aria;ПВХ, Эмаль;11;11;0;11;11;0;needs_review;"with_image=0; missing_image=11; needs_review=11; bad_image=0"
+Энтро;Galant;ПВХ, Эмаль;16;16;0;16;16;0;needs_review;"with_image=0; missing_image=16; needs_review=16; bad_image=0"
+Энтро;Magic;ПВХ, Эмаль;11;11;0;11;11;0;needs_review;"with_image=0; missing_image=11; needs_review=11; bad_image=0"
+Энтро;Zero;ПВХ, Эмаль;8;8;0;8;8;0;needs_review;"with_image=0; missing_image=8; needs_review=8; bad_image=0"
+Энтро;Toscana;ПВХ, Эмаль;12;12;0;12;12;0;needs_review;"with_image=0; missing_image=12; needs_review=12; bad_image=0"
+Энтро;Freedom;ПВХ, Эмаль;10;10;0;10;10;0;needs_review;"with_image=0; missing_image=10; needs_review=10; bad_image=0"
+Энтро;Rift;ПВХ, Эмаль;6;6;0;6;6;0;needs_review;"with_image=0; missing_image=6; needs_review=6; bad_image=0"
+Энтро;Window;ПВХ, Эмаль;10;10;0;10;10;0;needs_review;"with_image=0; missing_image=10; needs_review=10; bad_image=0"
+Энтро;Hidden;ПВХ, Эмаль;7;7;0;7;7;0;needs_review;"with_image=0; missing_image=7; needs_review=7; bad_image=0"
+Энтро;Unico;ПВХ, Эмаль;12;12;0;12;12;0;needs_review;"with_image=0; missing_image=12; needs_review=12; bad_image=0"
+Энтро;Gradient;ПВХ, Эмаль;6;6;0;6;6;0;needs_review;"with_image=0; missing_image=6; needs_review=6; bad_image=0"
+Энтро;Alliance;ПВХ, Эмаль;4;4;0;4;4;0;needs_review;"with_image=0; missing_image=4; needs_review=4; bad_image=0"
+Энтро;Prime;ПВХ, Эмаль;14;14;0;14;14;0;needs_review;"with_image=0; missing_image=14; needs_review=14; bad_image=0"
+Энтро;Fashion;ПВХ, Эмаль;14;14;0;14;14;0;needs_review;"with_image=0; missing_image=14; needs_review=14; bad_image=0"
+Энтро;Neo;ПВХ, Эмаль;7;7;0;7;7;0;needs_review;"with_image=0; missing_image=7; needs_review=7; bad_image=0"
+Энтро;Veneer;ПВХ, Эмаль;8;8;0;8;8;0;needs_review;"with_image=0; missing_image=8; needs_review=8; bad_image=0"
+Энтро;Line;ПВХ, Эмаль;12;12;0;12;12;0;needs_review;"with_image=0; missing_image=12; needs_review=12; bad_image=0"
+Энтро;Band;ПВХ, Эмаль;12;12;0;12;12;0;needs_review;"with_image=0; missing_image=12; needs_review=12; bad_image=0"
+Энтро;Simple;ПВХ, Эмаль;20;20;0;20;20;0;needs_review;"with_image=0; missing_image=20; needs_review=20; bad_image=0"
+Энтро;Horizon;ПВХ, Эмаль;15;15;0;15;15;0;needs_review;"with_image=0; missing_image=15; needs_review=15; bad_image=0"
+Энтро;Forward;ПВХ, Эмаль;10;10;0;10;10;0;needs_review;"with_image=0; missing_image=10; needs_review=10; bad_image=0"
+Энтро;Motion;ПВХ, Эмаль;10;10;0;10;10;0;needs_review;"with_image=0; missing_image=10; needs_review=10; bad_image=0"
+Энтро;Slab decor;ПВХ, Эмаль;2;2;0;2;2;0;needs_review;"with_image=0; missing_image=2; needs_review=2; bad_image=0"
+Энтро;Mone;ПВХ, Эмаль;7;7;0;7;7;0;needs_review;"with_image=0; missing_image=7; needs_review=7; bad_image=0"
+Энтро;Minimal;ПВХ, Эмаль;6;6;0;6;6;0;needs_review;"with_image=0; missing_image=6; needs_review=6; bad_image=0"
+Энтро;Elite;ПВХ, Эмаль;12;12;0;12;12;0;needs_review;"with_image=0; missing_image=12; needs_review=12; bad_image=0"
+Энтро;Pure;ПВХ, Эмаль;12;12;0;12;12;0;needs_review;"with_image=0; missing_image=12; needs_review=12; bad_image=0"
+Энтро;Degree;ПВХ, Эмаль;12;12;0;12;12;0;needs_review;"with_image=0; missing_image=12; needs_review=12; bad_image=0"
+Энтро;Insignia;ПВХ, Эмаль;8;8;0;8;8;0;needs_review;"with_image=0; missing_image=8; needs_review=8; bad_image=0"
+Энтро;Gala;ПВХ, Эмаль;18;18;0;18;18;0;needs_review;"with_image=0; missing_image=18; needs_review=18; bad_image=0"
+Энтро;Architect;ПВХ, Эмаль;8;8;0;8;8;0;needs_review;"with_image=0; missing_image=8; needs_review=8; bad_image=0"
+АСД;Все модели;;199;199;199;0;194;0;needs_review;"with_image=199; missing_image=0; needs_review=194; bad_image=0"
