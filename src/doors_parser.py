@@ -9,7 +9,7 @@ import traceback
 from dataclasses import asdict
 from datetime import datetime
 from pathlib import Path
-from collections import Counter
+from collections import Counter, defaultdict
 from urllib.parse import urlparse
 
 # Ensure project root is on sys.path so "from src.adapters" works
@@ -63,8 +63,8 @@ def read_targets(path: Path) -> list[TargetLine]:
                 door_type=row.get("door_type", ""),
                 manufacturer=row.get("manufacturer", ""),
                 target_line=row.get("target_line", ""),
-                material_manual="",
-                covering_from_source="",
+                material_manual=row.get("material_manual", ""),
+                covering_from_source=row.get("covering_from_source", ""),
                 source_site=row.get("source_site", ""),
                 source_note=row.get("source_note", ""),
             ))
@@ -199,7 +199,7 @@ def write_xlsx(path: Path, rows: list[DoorItem], targets: list[TargetLine], repo
     if rows:
         rp.append(["С моделями(status=found)", sum(1 for r in rows if r.status == "found")])
         rp.append(["С моделями(status=needs_review)", sum(1 for r in rows if r.status == "needs_review")])
-    rp.append(["Комментарий", "Парсятся только линейки из target_lines.csv. Материал/покрытие пустые."])
+    rp.append(["Комментарий", "Парсятся только линейки из target_lines.csv. Материал берется из target_lines.csv при наличии."])
     rp.append([])
     rp.append(["Производитель", "Страниц", "Моделей", "Ошибки"])
     for man, info in report.get("sites", {}).items():
@@ -222,81 +222,256 @@ def write_xlsx(path: Path, rows: list[DoorItem], targets: list[TargetLine], repo
 
 # ── QA report ─────────────────────────────────────────────────────────────────
 
+_SCAMBIO_BAD_IMAGE_HINTS = (
+    "logo",
+    "icon",
+    "pixel",
+    "placeholder",
+    "loader",
+    "catalog.svg",
+    "search_loop",
+    "colors_images",
+    "sale",
+    "new",
+    "hit",
+    "arrow",
+    "cart",
+    "profil",
+    "korob",
+    "nalichnik",
+    "dobor",
+    "razrez",
+    "sechen",
+)
+
+_SCAMBIO_BAD_MODEL_PREFIXES = (
+    "коробка", "наличник", "добор", "погонаж", "телескоп",
+    "притвор", "капитель", "карниз", "розетка", "плинтус",
+    "подпятник", "профиль", "комплект", "разрез", "сечение",
+    "образец", "цвет", "покрытие",
+)
+
+
+def _normalized_model_key(model_name: str) -> str:
+    cleaned, _ = normalize_dver_model_name(model_name or "")
+    cleaned = re.sub(r"\.{2,}", " ", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip(" \t\r\n.,;:-")
+    return normalize(cleaned)
+
+
+def _is_bad_image_url(image_url: str) -> bool:
+    if not image_url:
+        return False
+    low = image_url.lower()
+    return any(h in low for h in _SCAMBIO_BAD_IMAGE_HINTS) or any(k in low for k in BAD_IMAGE_KEYWORDS)
+
+
+def _is_suspicious_model_name(model_name: str) -> bool:
+    n = normalize(model_name)
+    if not n:
+        return True
+    if n.startswith("дверь "):
+        return False
+    return any(n == p or n.startswith(p + " ") for p in _SCAMBIO_BAD_MODEL_PREFIXES)
+
+
+def _row_image_score(row: DoorItem) -> int:
+    score = 0
+    low = (row.image_url or "").lower()
+    if row.status == "found":
+        score += 40
+    if low:
+        score += 20
+    if "/xml/images/" in low:
+        score += 100
+    if low.endswith(".jpg") or low.endswith(".jpeg"):
+        score += 15
+    if _is_bad_image_url(low):
+        score -= 80
+    if row.source_url:
+        score += 5
+    return score
+
+
+def dedup_by_model(rows: list[DoorItem]) -> tuple[list[DoorItem], list[dict]]:
+    grouped: dict[tuple[str, str, str], list[DoorItem]] = defaultdict(list)
+    for row in rows:
+        key = (
+            normalize(row.manufacturer),
+            normalize(row.line),
+            _normalized_model_key(row.model_name),
+        )
+        grouped[key].append(row)
+
+    selected: list[DoorItem] = []
+    duplicates: list[dict] = []
+    for (prod, line, model_key), group in grouped.items():
+        ranked = sorted(group, key=_row_image_score, reverse=True)
+        winner = ranked[0]
+        selected.append(winner)
+        for dup in ranked[1:]:
+            duplicates.append({
+                "producer": dup.manufacturer,
+                "target_line": dup.line,
+                "model_name": dup.model_name,
+                "selected_image_url": winner.image_url,
+                "rejected_image_url": dup.image_url,
+                "source_url": dup.source_url,
+                "reason": "duplicate_model_same_line",
+            })
+    return selected, duplicates
+
+
+def write_duplicates_report(path: Path, rows: list[dict]) -> None:
+    fields = [
+        "producer",
+        "target_line",
+        "model_name",
+        "selected_image_url",
+        "rejected_image_url",
+        "source_url",
+        "reason",
+    ]
+    with path.open("w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields, delimiter=";")
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: r.get(k, "") for k in fields})
+
+
+def write_image_audit(path: Path, rows: list[dict]) -> None:
+    fields = [
+        "target_line",
+        "model_name",
+        "old_image_url",
+        "selected_image_url",
+        "rejected_image_urls",
+        "image_status",
+        "reason",
+    ]
+    with path.open("w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields, delimiter=";")
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: r.get(k, "") for k in fields})
+
+
+def print_scambio_console_summary(rows: list[DoorItem], targets: list[TargetLine]) -> None:
+    target_lines = [t.target_line for t in targets]
+    grouped: dict[str, list[DoorItem]] = defaultdict(list)
+    for r in rows:
+        grouped[normalize(r.line)].append(r)
+
+    print("\n  СВОДКА СКАМБИО:")
+    print(f"    строк всего: {len(rows)}")
+    print(f"    target_line найдено: {sum(1 for t in target_lines if normalize(t) in grouped)}/{len(target_lines)}")
+
+    print("    моделей по линейкам:")
+    for t in target_lines:
+        cnt = len({normalize(r.model_name) for r in grouped.get(normalize(t), [])})
+        print(f"      - {t}: {cnt}")
+
+    missing_image = sum(1 for r in rows if not r.image_url)
+    needs_review = sum(1 for r in rows if r.status == "needs_review")
+    print(f"    строк без фото: {missing_image}")
+    print(f"    needs_review: {needs_review}")
+
+    suspicious_urls = Counter(
+        (r.image_url or "").strip()
+        for r in rows
+        if r.image_url and _is_bad_image_url(r.image_url)
+    )
+    suspicious_models = Counter(
+        (r.model_name or "").strip()
+        for r in rows
+        if _is_suspicious_model_name(r.model_name)
+    )
+
+    print("    топ-20 подозрительных image_url:")
+    for url, cnt in suspicious_urls.most_common(20):
+        print(f"      - {cnt}x {url}")
+    if not suspicious_urls:
+        print("      - нет")
+
+    print("    топ-20 подозрительных model_name:")
+    for mn, cnt in suspicious_models.most_common(20):
+        print(f"      - {cnt}x {mn}")
+    if not suspicious_models:
+        print("      - нет")
+
 def write_qa_report(path: Path, all_rows: list[DoorItem], targets: list[TargetLine],
                     report: dict, site_rows: dict[str, list[DoorItem]]) -> None:
     grouped: dict[tuple[str, str], list[DoorItem]] = {}
-    for r in all_rows:
-        grouped.setdefault((normalize(r.manufacturer), normalize(r.line)), []).append(r)
+    for row in all_rows:
+        grouped.setdefault((normalize(row.manufacturer), normalize(row.line)), []).append(row)
 
-    # Track which source URLs appear in many lines
-    url_line_count: Counter = Counter()
-    for r in all_rows:
-        url_line_count[(r.source_url, normalize(r.line))] += 1
-    url_total_lines: Counter = Counter()
-    for (url, line), cnt in url_line_count.items():
-        url_total_lines[url] += 1
+    checks_map: dict[tuple[str, str], list[str]] = {}
+    for man_name, man_info in (report.get("sites") or {}).items():
+        cchecks = man_info.get("collection_checks", {})
+        for line, urls in cchecks.items():
+            checks_map[(normalize(man_name), normalize(line))] = list(urls or [])
 
     with path.open("w", encoding="utf-8-sig", newline="") as f:
         fields = [
-            "producer", "target_line", "rows_count", "unique_models_count",
-            "unique_source_urls_count", "bad_images_count",
-            "generic_pages_count", "duplicate_rows_count",
-            "needs_review_count", "status", "comment",
+            "producer",
+            "target_line",
+            "expected_material",
+            "rows_count",
+            "unique_models_count",
+            "with_image_count",
+            "missing_image_count",
+            "needs_review_count",
+            "bad_image_count",
+            "status",
+            "comment",
         ]
         w = csv.DictWriter(f, fieldnames=fields, delimiter=";")
         w.writeheader()
 
-        for t in targets:
-            key = (normalize(t.manufacturer), normalize(t.target_line))
+        for target in targets:
+            key = (normalize(target.manufacturer), normalize(target.target_line))
             rows = grouped.get(key, [])
-            nf_status = "found" if rows else "not_found"
+            expected_material = target.covering_from_source or target.material_manual or ""
 
             rows_count = len(rows)
-            unique_models = len(set(normalize(r.model_name) for r in rows))
-            unique_urls = len(set(r.source_url for r in rows))
-            bad_images = sum(1 for r in rows if any(k in (r.image_url or "").lower() for k in BAD_IMAGE_KEYWORDS))
-            generic_pages = sum(1 for r in rows if is_generic_page(r.model_name, r.source_url))
-            duplicate_rows = rows_count - unique_models if rows else 0
-            needs_review = sum(1 for r in rows if r.status == "needs_review")
-
-            comments = []
-            status = nf_status
+            unique_models = len({_normalized_model_key(r.model_name) for r in rows})
+            with_image_count = sum(1 for r in rows if r.image_url)
+            missing_image_count = rows_count - with_image_count
+            needs_review_count = sum(1 for r in rows if r.status == "needs_review")
+            bad_image_count = sum(1 for r in rows if _is_bad_image_url(r.image_url))
 
             if rows_count == 0:
                 status = "not_found"
-                comments.append("no rows")
-            elif generic_pages > rows_count * 0.3:
-                status = "needs_manual_review"
-                comments.append(f"{generic_pages}/{rows_count} generic pages")
-            elif bad_images > rows_count * 0.5:
-                status = "needs_manual_review"
-                comments.append(f"{bad_images}/{rows_count} bad images")
-            elif needs_review > rows_count * 0.5:
-                status = "needs_manual_review"
-                comments.append(f"{needs_review}/{rows_count} needs_review")
-
-            # Check if source URLs are shared across many lines
-            for r in rows:
-                if url_total_lines.get(r.source_url, 0) >= 3:
-                    status = "needs_manual_review"
-                    comments.append(f"url shared across {url_total_lines[r.source_url]} lines")
-                    break
-
-            if not comments:
-                comments.append("ok")
+                checked_urls = checks_map.get(key, [])
+                if checked_urls:
+                    checked_joined = " | ".join(checked_urls[:4])
+                    comment = f"collection_not_found_on_site; checked: {checked_joined}"
+                else:
+                    comment = "collection_not_found_on_site; no collection checks recorded"
+            elif bad_image_count > 0 or missing_image_count > 0 or needs_review_count > 0:
+                status = "needs_review"
+                comment = (
+                    f"with_image={with_image_count}; "
+                    f"missing_image={missing_image_count}; "
+                    f"bad_image={bad_image_count}; "
+                    f"needs_review={needs_review_count}"
+                )
+            else:
+                status = "found"
+                comment = "ok"
 
             w.writerow({
-                "producer": t.manufacturer,
-                "target_line": t.target_line,
+                "producer": target.manufacturer,
+                "target_line": target.target_line,
+                "expected_material": expected_material,
                 "rows_count": rows_count,
                 "unique_models_count": unique_models,
-                "unique_source_urls_count": unique_urls,
-                "bad_images_count": bad_images,
-                "generic_pages_count": generic_pages,
-                "duplicate_rows_count": duplicate_rows,
-                "needs_review_count": needs_review,
+                "with_image_count": with_image_count,
+                "missing_image_count": missing_image_count,
+                "needs_review_count": needs_review_count,
+                "bad_image_count": bad_image_count,
                 "status": status,
-                "comment": "; ".join(comments),
+                "comment": comment,
             })
 
 
@@ -356,6 +531,12 @@ def main() -> None:
         return
 
     targets = read_targets(args.targets)
+    if args.only:
+        n_only = normalize(args.only)
+        targets = [t for t in targets if normalize(t.manufacturer) == n_only]
+        if not targets:
+            print(f"[WARN] Manufacturer '{args.only}' not found in targets.")
+            sys.exit(1)
     sites_map = load_sites(args.sites)
 
     grouped: dict[str, list[TargetLine]] = {}
@@ -391,16 +572,13 @@ def main() -> None:
     if args.only:
         n_only = normalize(args.only)
         manufacturers_to_process = [(k, v) for k, v in manufacturers_to_process if k == n_only]
-        if not manufacturers_to_process:
-            print(f"[WARN] Manufacturer '{args.only}' not found in targets. Available:")
-            for k in grouped:
-                print(f"       - {k}")
-            sys.exit(1)
         print(f"\n  Filtered to manufacturer: {args.only}")
 
     if args.limit_sites:
         manufacturers_to_process = manufacturers_to_process[:args.limit_sites]
         print(f"  Limited to {args.limit_sites} site(s)")
+
+    image_audit_rows: list[dict] = []
 
     for idx, (man_normalized, tlist) in enumerate(manufacturers_to_process, 1):
         if args.resume and man_normalized in completed_sites:
@@ -443,6 +621,9 @@ def main() -> None:
 
             site_log["items"] = len(rows)
             site_log["manufacturer"] = man_name
+            image_audit_rows.extend(site_log.get("image_audit", []))
+            site_log["image_audit_count"] = len(site_log.get("image_audit", []))
+            site_log.pop("image_audit", None)
             report["sites"][man_name] = site_log
             report["completed_sites"].append(man_normalized)
 
@@ -461,17 +642,8 @@ def main() -> None:
             report["errors"].append(f"{man_name}: {e}")
             print(f"      [ERROR] {man_name}: {e}")
 
-    # Final global dedup (producer + target_line + model_name + image_url + source_url)
-    seen: set[tuple[str, str, str, str, str]] = set()
-    deduped = []
-    for r in all_rows:
-        key = (normalize(r.manufacturer), normalize(r.line), normalize(r.model_name),
-               normalize(r.image_url), normalize(r.source_url))
-        if key in seen:
-            continue
-        seen.add(key)
-        deduped.append(r)
-    all_rows = deduped
+    # Final dedup by producer + target_line + normalized model_name
+    all_rows, duplicates_rows = dedup_by_model(all_rows)
 
     # Clean dver.com model names (remove sizes, "Распродажа")
     for r in all_rows:
@@ -485,6 +657,8 @@ def main() -> None:
                 r.model_name = cleaned
 
     report["total_items"] = len(all_rows)
+    report["duplicates_removed"] = len(duplicates_rows)
+    report["image_audit_rows"] = len(image_audit_rows)
     report["end_time"] = datetime.now().isoformat()
 
     found_lines = set()
@@ -498,6 +672,8 @@ def main() -> None:
     write_wp_csv(out_dir / "wordpress_import.csv", all_rows)
     write_not_found(out_dir / "not_found.csv", targets, all_rows)
     write_qa_report(out_dir / "qa_report.csv", all_rows, targets, report, site_rows)
+    write_image_audit(out_dir / "image_audit.csv", image_audit_rows)
+    write_duplicates_report(out_dir / "duplicates_report.csv", duplicates_rows)
     write_xlsx(out_dir / "doors_catalog.xlsx", all_rows, targets, report)
     (out_dir / "run_report.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -517,8 +693,11 @@ def main() -> None:
     print(f"    Models found: {found_total}")
     print(f"    Needs review: {review_total}")
     print(f"    Not found lines: {nf_count}")
+    print(f"    Duplicates removed: {len(duplicates_rows)}")
     print(f"    Errors: {len(report['errors'])}")
     print(f"    Output: {out_dir.resolve()}")
+    if args.only and normalize(args.only) == normalize("Скамбио Порте"):
+        print_scambio_console_summary(all_rows, targets)
     print(f"{'=' * 60}")
 
 

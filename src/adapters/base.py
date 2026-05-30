@@ -136,6 +136,11 @@ def fetch(session: requests.Session, url: str, timeout: tuple = (5, 15), retries
     for attempt in range(retries):
         try:
             r = session.get(url, headers=HEADERS, timeout=timeout, allow_redirects=True)
+            if r.status_code in {429, 502, 503, 504}:
+                if attempt < retries - 1:
+                    time.sleep(2 * (attempt + 1))
+                    continue
+                return None
             if r.status_code >= 400:
                 return None
             ctype = r.headers.get("Content-Type", "")
