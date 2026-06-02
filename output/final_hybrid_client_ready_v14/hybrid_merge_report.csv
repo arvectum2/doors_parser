@@ -1,0 +1,11 @@
+﻿producer;source_used;rows_count;changed_vs_baseline;comment
+АСД;final_ready_v13;199;allowed;Replaced from final_ready_v13
+Энтро;final_ready_v13;312;allowed;Replaced from final_ready_v13
+Хаусдорс;final_ready_v13_with_one_duplicate_removed;27;allowed;Replaced from final_ready_v13_with_one_duplicate_removed
+Олимп;final_ready_v13;86;allowed;Replaced from final_ready_v13
+Скамбио Порте;final_ready_v11_baseline_client_sent;890;false;Unchanged from baseline
+Лорд;final_ready_v11_baseline_client_sent;932;false;Unchanged from baseline
+Аэлита;final_ready_v11_baseline_client_sent;335;false;Unchanged from baseline
+Комфорт;final_ready_v11_baseline_client_sent;58;false;Unchanged from baseline
+Двери регионов;final_ready_v11_baseline_client_sent;40;false;Unchanged from baseline
+Термодур;final_ready_v11_baseline_client_sent;205;false;Unchanged from baseline

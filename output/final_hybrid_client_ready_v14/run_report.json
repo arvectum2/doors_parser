@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-06-02 12:15:17",
+  "mode": "final_hybrid_client_ready_v14",
+  "baseline_used": "C:\\Users\\GN\\Desktop\\doors_parser_ready_fix\\output\\final_ready_v11\\doors_catalog.csv",
+  "fixed_source_used": "C:\\Users\\GN\\Desktop\\doors_parser_ready_fix\\output\\final_ready_v13\\doors_catalog.csv",
+  "total_rows": 3084,
+  "producers_count": 10,
+  "rows_by_producer": {
+    "АСД": 199,
+    "Аэлита": 335,
+    "Двери регионов": 40,
+    "Комфорт": 58,
+    "Лорд": 932,
+    "Олимп": 86,
+    "Скамбио Порте": 890,
+    "Термодур": 205,
+    "Хаусдорс": 27,
+    "Энтро": 312
+  },
+  "rows_with_image": 2997,
+  "rows_without_image": 87,
+  "needs_review_count": 362,
+  "needs_review_by_producer": {
+    "АСД": 25,
+    "Аэлита": 2,
+    "Двери регионов": 4,
+    "Комфорт": 11,
+    "Лорд": 4,
+    "Олимп": 30,
+    "Скамбио Порте": 246,
+    "Термодур": 27,
+    "Хаусдорс": 12,
+    "Энтро": 1
+  },
+  "duplicates_count": 0,
+  "unchanged_baseline_check": {
+    "Скамбио Порте": "True",
+    "Лорд": "True",
+    "Аэлита": "True",
+    "Комфорт": "True",
+    "Двери регионов": "True",
+    "Термодур": "True"
+  },
+  "hybrid_merge_report_summary": {
+    "АСД": "final_ready_v13",
+    "Энтро": "final_ready_v13",
+    "Хаусдорс": "final_ready_v13_with_one_duplicate_removed",
+    "Олимп": "final_ready_v13",
+    "Скамбио Порте": "final_ready_v11_baseline_client_sent",
+    "Лорд": "final_ready_v11_baseline_client_sent",
+    "Аэлита": "final_ready_v11_baseline_client_sent",
+    "Комфорт": "final_ready_v11_baseline_client_sent",
+    "Двери регионов": "final_ready_v11_baseline_client_sent",
+    "Термодур": "final_ready_v11_baseline_client_sent"
+  }
+}

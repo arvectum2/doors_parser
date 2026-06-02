@@ -22,7 +22,7 @@
 Скамбио Порте;Инвизибл;Под покраску;1;1;1;needs_manual_review;collection not found on site
 Хаусдорс;Фактурные линии;ПВХ;14;14;0;found;ok
 Хаусдорс;Классико;ПВХ;95;95;0;found;ok
-Хаусдорс;Порта;ПВХ;1;1;0;needs_manual_review;collection not found on site
+Хаусдорс;Порта;ПВХ;1;1;1;needs_manual_review;collection not found on site
 Хаусдорс;Новая классика;ПВХ;14;14;0;found;ok
 Хаусдорс;Вертикаль;Эмаль;12;12;0;found;ok
 Хаусдорс;Минимализм;ПВХ;14;14;0;found;ok
@@ -37,7 +37,7 @@
 Хаусдорс;Под покраску;под покраску;134;134;0;found;ok
 Хаусдорс;С зеркалом;под покраску;196;196;0;found;ok
 Хаусдорс;Входные аллюминиевые;;1;1;0;found;ok
-Хаусдорс;Входные металлические;;1;1;0;needs_manual_review;collection not found on site
+Хаусдорс;Входные металлические;;1;1;1;needs_manual_review;collection not found on site
 Олимп;Гамма;ШПОН;10;10;0;found;ok
 Олимп;Магнум;ШПОН;8;8;0;found;ok
 Олимп;Директ +;ШПОН;30;30;0;found;ok
@@ -45,7 +45,7 @@
 Олимп;Нюанс;ШПОН;9;9;0;found;ok
 Олимп;Галео;ШПОН;33;33;0;found;ok
 Олимп;Рич;ШПОН;9;9;0;found;ok
-Олимп;Директ;ШПОН;1;1;0;needs_manual_review;collection not found on site
+Олимп;Директ;ШПОН;1;1;1;needs_manual_review;collection not found on site
 Олимп;Денди;ШПОН;9;9;0;found;ok
 Олимп;Сингл;ШПОН;13;13;0;found;ok
 Олимп;Токио;ШПОН;31;31;0;found;ok
@@ -99,14 +99,14 @@
 Лорд;Италия;ПВХ,Эмаль;46;46;0;found;ok
 Лорд;Корона;ПВХ,Эмаль;13;13;0;found;ok
 Лорд;Белла;ПВХ,Эмаль;23;23;0;found;ok
-Лорд;Соло;ПВХ,Эмаль;14;14;0;found;ok
+Лорд;Соло;ПВХ,Эмаль;14;14;1;found;ok
 Лорд;Техно;ПВХ,Эмаль;12;12;0;found;ok
 Лорд;Мелфорд;ПВХ,Эмаль;14;14;0;found;ok
 Лорд;Стиль;ПВХ,Эмаль;15;15;0;found;ok
 Лорд;Модерн;ПВХ,Эмаль;28;28;0;found;ok
 Лорд;Альфа;ПВХ,Эмаль;10;10;0;found;ok
 Лорд;Атриум;ПВХ,Эмаль;19;19;0;found;ok
-Лорд;Пунта;ПВХ,Эмаль;7;7;0;found;ok
+Лорд;Пунта;ПВХ,Эмаль;7;7;3;found;ok
 Лорд;Луна;ПВХ,Эмаль;4;4;0;found;ok
 Лорд;Зенит;ПВХ,Эмаль;4;4;0;found;ok
 Лорд;Арея;ПВХ,Эмаль;6;6;0;found;ok
@@ -122,33 +122,33 @@
 Лорд;Футуристик;ПВХ,Эмаль;40;40;0;found;ok
 Лорд;Эклисси;ПВХ,Эмаль;14;14;0;found;ok
 Комфорт;Эмаль;Эмаль;47;47;0;found;ok
-Комфорт;New line;Эмаль;1;1;0;needs_manual_review;collection not found on site
-Комфорт;Slope;Эмаль;1;1;0;needs_manual_review;collection not found on site
-Комфорт;True;Эмаль;1;1;0;needs_manual_review;collection not found on site
-Комфорт;Gift;Эмаль;1;1;0;needs_manual_review;collection not found on site
-Комфорт;Art;Эмаль;1;1;0;needs_manual_review;collection not found on site
-Комфорт;Premier;Эмаль;1;1;0;needs_manual_review;collection not found on site
-Комфорт;Malta;Эмаль;1;1;0;needs_manual_review;collection not found on site
-Комфорт;Neo;Эмаль;1;1;0;needs_manual_review;collection not found on site
-Комфорт;Molding;Эмаль;1;1;0;needs_manual_review;collection not found on site
-Комфорт;Turin;Эмаль;1;1;0;needs_manual_review;collection not found on site
-Комфорт;Экошпон;ПВХ;1;1;0;needs_manual_review;collection not found on site
-Двери регионов;Массив;массив;1;1;0;needs_manual_review;collection not found on site
+Комфорт;New line;Эмаль;1;1;1;needs_manual_review;collection not found on site
+Комфорт;Slope;Эмаль;1;1;1;needs_manual_review;collection not found on site
+Комфорт;True;Эмаль;1;1;1;needs_manual_review;collection not found on site
+Комфорт;Gift;Эмаль;1;1;1;needs_manual_review;collection not found on site
+Комфорт;Art;Эмаль;1;1;1;needs_manual_review;collection not found on site
+Комфорт;Premier;Эмаль;1;1;1;needs_manual_review;collection not found on site
+Комфорт;Malta;Эмаль;1;1;1;needs_manual_review;collection not found on site
+Комфорт;Neo;Эмаль;1;1;1;needs_manual_review;collection not found on site
+Комфорт;Molding;Эмаль;1;1;1;needs_manual_review;collection not found on site
+Комфорт;Turin;Эмаль;1;1;1;needs_manual_review;collection not found on site
+Комфорт;Экошпон;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Двери регионов;Массив;массив;1;1;1;needs_manual_review;collection not found on site
 Двери регионов;Натуральный шпон;шпон;19;19;0;found;ok
-Двери регионов;Софт тач;ПВХ;1;1;0;needs_manual_review;collection not found on site
-Двери регионов;Экошпон;ПВХ;1;1;0;needs_manual_review;collection not found on site
+Двери регионов;Софт тач;ПВХ;1;1;1;needs_manual_review;collection not found on site
+Двери регионов;Экошпон;ПВХ;1;1;1;needs_manual_review;collection not found on site
 Двери регионов;Эмаль и лак;Эмаль;18;18;1;found;ok
-Термодур;Сибирь термо медь;;104;104;0;found;ok
+Термодур;Сибирь термо медь;;104;104;5;found;ok
 Термодур;Сибирь термо серебро;;33;33;0;found;ok
-Термодур;Сибирь термо премиум;;46;46;0;found;ok
-Термодур;Зеркало/стекло;;1;1;0;found;ok
-Термодур;Термо лацио;;1;1;0;found;ok
-Термодур;Термо вертикаль грей;;2;2;0;found;ok
-Термодур;Термо вертикаль венге;;3;3;0;found;ok
-Термодур;Термо виргиния венге;;1;1;0;found;ok
-Термодур;Термо модена венге;;1;1;0;found;ok
-Термодур;Термо орегон венге;;2;2;0;found;ok
-Термодур;Термо премиум грей;;11;11;0;found;ok
+Термодур;Сибирь термо премиум;;46;46;5;found;ok
+Термодур;Зеркало/стекло;;1;1;1;needs_manual_review;1/1 no image
+Термодур;Термо лацио;;1;1;1;needs_manual_review;1/1 no image
+Термодур;Термо вертикаль грей;;2;2;2;needs_manual_review;2/2 no image
+Термодур;Термо вертикаль венге;;3;3;3;needs_manual_review;3/3 no image
+Термодур;Термо виргиния венге;;1;1;1;needs_manual_review;1/1 no image
+Термодур;Термо модена венге;;1;1;1;needs_manual_review;1/1 no image
+Термодур;Термо орегон венге;;2;2;2;needs_manual_review;2/2 no image
+Термодур;Термо премиум грей;;11;11;2;found;ok
 Энтро;Aria;ПВХ, Эмаль;11;11;0;found;ok
 Энтро;Galant;ПВХ, Эмаль;16;16;0;found;ok
 Энтро;Magic;ПВХ, Эмаль;11;11;0;found;ok

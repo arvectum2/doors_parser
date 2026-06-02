@@ -46,7 +46,8 @@ BAD_PATH_KEYWORDS = [
     "cart", "search", "arrow", "marker",
     "catalog.svg", "search_loop", "colors_images", "open.png",
     "no_image", "no-image", "noimage", "placeholder", "blank",
-    "sprite", "loader", "pixel", "favicon",
+    "sprite", "loader", "pixel", "pixel.gif", "favicon", "/themes/", "topmarket",
+    "akcii", "promo",
     # Thumbnail indicators (not part of domain)
     "cache/thumb", "thumbnail", "/thumb", "miniatur",
     # Sale/promo badges
