@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-02 14:20:38",
+  "mode": "final_hybrid_client_ready_v15_asd_photos_only",
+  "based_on": "v14 hybrid + ASD photo patch",
+  "total_rows": 3084,
+  "producers_count": 10,
+  "rows_by_producer": {
+    "Скамбио Порте": 890,
+    "Лорд": 932,
+    "Аэлита": 335,
+    "Комфорт": 58,
+    "Двери регионов": 40,
+    "Термодур": 205,
+    "АСД": 199,
+    "Энтро": 312,
+    "Хаусдорс": 27,
+    "Олимп": 86
+  },
+  "rows_with_image": 3021,
+  "rows_without_image": 63,
+  "asd_images_replaced": 198,
+  "needs_review_count": 338,
+  "needs_review_by_producer": {
+    "Скамбио Порте": 246,
+    "Лорд": 4,
+    "Аэлита": 2,
+    "Комфорт": 11,
+    "Двери регионов": 4,
+    "Термодур": 27,
+    "АСД": 1,
+    "Энтро": 1,
+    "Хаусдорс": 12,
+    "Олимп": 30
+  },
+  "duplicates": 0
+}
