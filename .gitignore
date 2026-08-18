@@ -4,3 +4,45 @@ __pycache__/
 *.pyo
 .env
 archives/
+
+# Output files
+output/*
+!output/doors_catalog.csv
+!output/doors_catalog.xlsx
+!output/wordpress_import.csv
+!output/qa_report.csv
+!output/run_report.json
+!output/not_found.csv
+!output/duplicates_report.csv
+!output/image_audit.csv
+
+# Archive files
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+
+# Temporary files
+*.tmp
+*.temp
+
+# Data backup files
+*.db
+
+# Log files
+*.log
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
