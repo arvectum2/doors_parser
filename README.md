@@ -156,3 +156,8 @@ python src/doors_parser.py --targets data/target_lines.csv --sites config/sites.
 - comment — причина, если требуется внимание
 
 Линейки со статусом `needs_manual_review` рекомендуется проверить вручную.
+
+
+## Spec Kit — candidate linkage (2026-11-20)
+
+[Specification](specs/001-contained-extraction-reference/spec.md) · [Plan](specs/001-contained-extraction-reference/plan.md) · [Integration tasks](specs/001-contained-extraction-reference/tasks.md). Original source and authority unchanged.
